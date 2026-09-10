@@ -136,3 +136,32 @@ AI tool used (Prompts 1-9): Devin (CLI agent, GLM-5.3 Flash Max)
 **My audit:** `node --check` passes; all 5 buttons carry `tip="..."` and clicking each still selects correctly in the browser.
 
 **Trade-off to own in the defense:** `data-*` is the official HTML slot for custom data (that's why `dataset` exists); a bare `tip="..."` attribute works in every browser but a validator will flag it as non-standard. Chose simplicity for this project.
+
+---
+
+## Prompt 10 — Pull the project from GitHub (Santiago)
+
+**Used by:** Santiago
+
+**Prompt:**
+> "jala de gh"
+
+**What changed:**
+- Pulled the current project from the `andres-up-dev/1st-midterm-webdev` GitHub repository into the local workspace.
+- Restored the project files so Santiago could continue working from the shared version.
+
+---
+
+## Prompt 11 — Generate the basic HTML scaffold (Andres)
+
+**Used by:** Andres
+
+**Prompt:**
+> "Generate quickly the basic structure for the Tip Calculator using only HTML so I can send it to Santi and he can start working on the JavaScript."
+
+**What changed:**
+- Generated the basic Tip Calculator HTML structure only.
+- Added the form fields, tip controls, result outputs, IDs, and names needed for the later JavaScript work.
+- Kept the scope limited to HTML so Andres could send the scaffold to Santiago and he could begin implementing the JS functionality.
+
+**My audit:** confirmed that the HTML scaffold exposed the main elements through stable IDs and names, with no JavaScript included in this initial handoff.
