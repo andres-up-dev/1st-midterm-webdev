@@ -219,9 +219,11 @@ input:focus-visible {
 
 .error-message {
   display: none;
+  max-width: 55%;
   margin: 0;
   color: #d68168;
   font-size: 0.8rem;
+  text-align: right;
 }
 
 .error-message.is-visible {
@@ -273,6 +275,10 @@ input:focus-visible {
   line-height: 1;
   text-align: right;
   white-space: nowrap;
+}
+
+.results-panel.is-invalid .result-value {
+  color: var(--grayish-cyan);
 }
 
 .reset-button {
