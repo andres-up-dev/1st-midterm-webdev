@@ -1,0 +1,195 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--light-grayish-cyan);
+  color: var(--dark-grayish-cyan);
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 5px solid color-mix(in srgb, var(--strong-cyan) 65%, white);
+  outline-offset: 4px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: center;
+}
+
+.brand-logo {
+  width: 100px;
+  height: 60px;
+}
+
+.calculator-card {
+  width: min(100%, 920px);
+  min-height: 480px;
+  background: var(--white);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.12);
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  margin: 0 0 0.55rem;
+  color: var(--dark-grayish-cyan);
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+  background: var(--very-light-grayish-cyan);
+}
+
+.input-icon {
+  position: absolute;
+  left: 1rem;
+  width: 0.7rem;
+  height: auto;
+  pointer-events: none;
+}
+.calculator-input {
+  width: 100%;
+  height: 100%;
+  padding: 0.2rem 1rem 0.2rem 3rem;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--very-dark-cyan);
+  font-size: 1.5rem;
+  line-height: 1;
+  text-align: right;
+}
+
+.calculator-input[type='number'] {
+  appearance: textfield;
+}
+
+.tip-button {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.35rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: var(--very-dark-cyan);
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.custom-tip-input {
+  border: 2px solid transparent;
+  outline: 0;
+  background: var(--very-light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  cursor: text;
+  text-align: center;
+}
+
+.custom-tip-input:focus {
+  border-color: var(--strong-cyan);
+  background: var(--white);
+}
+
+.error-message {
+  display: none;
+  margin: 0;
+  color: #d68168;
+  font-size: 1rem;
+}
+
+.error-message.is-visible {
+  display: inline;
+}
+
+.results-panel {
+  display: flex;
+  min-width: 0;
+  min-height: 16rem;
+  flex-direction: column;
+  background: var(--very-dark-cyan);
+}
+
+.result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.result-label {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: var(--white);
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.result-label p {
+  margin: 0;
+}
+
+.result-subtitle {
+  margin-top: 0.2rem;
+  color: var(--grayish-cyan);
+  font-size: 0.8rem;
+}
+
+.result-value {
+  color: var(--strong-cyan);
+  line-height: 1;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.reset-button {
+  width: 100%;
+  height: 3rem;
+  margin-top: auto;
+  padding: 0.2rem 1rem;
+  border: 0;
+  border-radius: 0.25rem;
+  background: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  cursor: pointer;
+  font-size: 1rem;
+}
